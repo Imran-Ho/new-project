@@ -22,7 +22,10 @@ const AddModal = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    const randomID = Math.random().toString(36).substring(2, 7);
+    // console.log(randomID);
     const taskDetails = {
+      id: randomID,
       title: task,
       description: description,
     };
